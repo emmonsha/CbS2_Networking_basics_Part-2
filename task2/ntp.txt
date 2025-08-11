@@ -1,0 +1,39 @@
+1. Какой протокол четвертого уровня (по OSI) используется для взаимодействия между ntp-клиентом и ntp-сервером
+
+UDP
+
+Какой протокол четвертого уровня (по OSI) используется для взаимодействия между ntp-клиентом и ntp-сервером
+1. Протокол транспортного уровня (L4 OSI):
+
+UDP (User Datagram Protocol)
+NTP использует UDP как транспортный протокол для минимальных задержек.
+2. Какие source и destination порты при этом используются?
+    Destination Port: 123
+    Исходный порт (Source Port): 123
+        
+        p.s. 123 (стандартный порт для NTP) если клиент и сервер работают в симметричном режиме.
+                        Случайный высокий порт (если клиент инициирует запрос, например, 49152–65535).
+
+передаваемое в первом NTP-пакете значение Transmit timestam
+        
+        - Transmit Timestamp: Jan  1, 2012 00:00:52.567946334 UTC
+
+
+
+Frame 46: 90 bytes on wire (720 bits), 90 bytes captured (720 bits) on interface -, id 0
+Ethernet II, Src: c4:02:07:d3:00:00 (c4:02:07:d3:00:00), Dst: c4:01:09:77:00:00 (c4:01:09:77:00:00)
+Internet Protocol Version 4, Src: 10.10.20.2, Dst: 10.10.10.1
+User Datagram Protocol, Src Port: 123, Dst Port: 123
+Network Time Protocol (NTP Version 3, client)
+    Flags: 0xdb, Leap Indicator: unknown (clock unsynchronized), Version number: NTP Version 3, Mode: client
+    [Response In: 47]
+    Peer Clock Stratum: unspecified or invalid (0)
+    Peer Polling Interval: 6 (64 seconds)
+    Peer Clock Precision: -24 (0.000000060 seconds)
+    Root Delay: 0.027985 seconds
+    Root Dispersion: 3.889984 seconds
+    Reference ID: Unidentified Kiss-o'-Death message '\n\n\n\x01'
+    Reference Timestamp: Aug 10, 2025 18:30:47.057538398 UTC
+    Origin Timestamp: NULL
+    Receive Timestamp: NULL
+    Transmit Timestamp: Jan  1, 2012 00:00:52.567946334 UTC

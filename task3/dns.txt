@@ -1,0 +1,8 @@
+Какие тип и класс запроса видны в DNS-запросе? 
+
+Source Port: Случайный высокий порт (например, 49152).
+Destination Port: 53/UDP.
+Тип запроса: A (IPv4-адрес).
+Класс запроса: IN (Internet).
+
+3	2.876800	10.10.10.1	10.10.10.2	DNS	89	Standard query response 0xac66 A emmonsha.site A 192.168.1.1
